@@ -4,7 +4,7 @@ version := "0.1.0-SNAPSHOT"
 
 
 
-lazy val rootProject = (project in file(".")).settings()
+lazy val rootProject = (project in file(".")).enablePlugins(OpenapiCodegenPlugin)
 
 scalaVersion := "2.13.10"
 val tapirVersion = "1.2.10"
