@@ -12,8 +12,13 @@ val tapirVersion = "1.2.10"
 libraryDependencies ++= Seq(
   // Akka
   "com.typesafe.akka"               %% "akka-actor"                 % "2.8.0",
+  "com.typesafe.akka"               %% "akka-actor-typed"           % "2.8.0",
+  "com.typesafe.akka"               %% "akka-stream"                % "2.8.0",
+  "com.typesafe.akka"               %% "akka-stream"                % "2.8.0",
+  "com.typesafe.akka"               %% "akka-http"                  % "10.5.0",
 
   // tapir
+  "com.softwaremill.sttp.tapir"     %% "tapir-akka-http-server"     % tapirVersion,
   "com.softwaremill.sttp.tapir"     %% "tapir-http4s-server-zio"    % tapirVersion,
   "com.softwaremill.sttp.tapir"     %% "tapir-http4s-server"        % tapirVersion,
 
@@ -30,7 +35,8 @@ libraryDependencies ++= Seq(
   "dev.zio"                         %% "zio-test-sbt"               % "2.0.10"      % Test,
   "com.softwaremill.sttp.client3"   %% "circe"                      % "3.8.13"      % Test,
   "org.scalactic"                   %% "scalactic"                  % "3.2.15"      % Test,
-  "org.scalatest"                   %% "scalatest"                  % "3.2.15"      % Test
+  "org.scalatest"                   %% "scalatest"                  % "3.2.15"      % Test,
+  "com.typesafe.akka"               %% "akka-stream-testkit"        % "2.8.0"       % Test
 )
 
 testFrameworks := Seq(new TestFramework("zio.test.sbt.ZTestFramework"))

@@ -1,6 +1,7 @@
 package com.dhoang.endpoints
 
 import com.dhoang.model.Model._
+import sttp.model.StatusCode
 
 object FirstEndpoint {
 
@@ -11,7 +12,6 @@ object FirstEndpoint {
     import io.circe.generic.auto._
     import sttp.tapir._
     import sttp.tapir.json.circe._
-    import sttp.tapir.EndpointOutput.StatusCode
     import sttp.tapir.Codec.PlainCodec
 
     // what is being done in the below val?
