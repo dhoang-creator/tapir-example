@@ -7,7 +7,9 @@ import sttp.tapir.server.http4s.ztapir.ZHttp4sServerInterpreter
 import zio.interop.catz._
 import zio.{Scope, Task, ZIO, ZIOAppArgs, ZIOAppDefault, Console}
 
+// Note that there is a mismatch here since we chose to do the example which utilises Futures as the Effectual System rather than ZIO
 object Main extends ZIOAppDefault {
+
 
   override def run: ZIO[Any with ZIOAppArgs with Scope, Any, Any] = {
 
